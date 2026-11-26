@@ -68,3 +68,9 @@ footer{padding:28px 0 40px;border-top:1px solid var(--line);color:var(--mut);fon
 @media(max-width:820px){nav ul{display:none}.hero,.about,.proj,.skills,.job{grid-template-columns:1fr}.job{gap:6px}.hero{padding-top:56px}.cert div{flex-direction:column;gap:2px}}
 @media(prefers-reduced-motion:reduce){.step{animation:none;opacity:1}html{scroll-behavior:auto}}
 @media print{:root{color-scheme:light}body{background:#fff;color:#111}nav,.hero .btns,.pipe,.contact .links,footer{display:none}section,.proj,.sk{border-color:#ccc;background:#fff;break-inside:avoid}.lead,.about p,.proj ul.pts,.job ul,.facts li,.job .org,.cert span{color:#333}h1 span,.job time,.sk h3{color:#7a6320}.tags li{background:#eee;color:#333}}
+
+/* ★ PROJECT LINKS: clickable project titles and repo buttons */
+.proj h3 a{border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+.proj h3 a:hover{color:var(--gold);border-color:var(--gold)}
+.repo{display:inline-block;margin-top:18px;font-size:14px;font-weight:500;color:var(--gold)}
+.repo:hover{text-decoration:underline}
