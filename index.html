@@ -1,76 +1,135 @@
-/* ============================================
-   Monil Patel Portfolio: style.css
-   Look for the star comment to resize the photo box
-   ============================================ */
-:root{--bg:#0b0b0e;--bg2:#121217;--line:#25252e;--tx:#ebe8df;--mut:#9b998f;--gold:#d9c48c;--ind:#6366f1;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-html{scroll-behavior:smooth;scroll-padding-top:70px}
-*,*::before,*::after{box-sizing:inherit}
-body{margin:0;background:var(--bg);color:var(--tx);font:400 16px/1.65 "Inter Tight",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}
-:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
-.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
-nav{position:sticky;top:0;z-index:5;background:rgba(11,11,14,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
-nav b{font-family:Fraunces,serif;font-weight:600;font-size:19px;color:var(--gold)}
-nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:14px;color:var(--mut)}
-nav ul a:hover{color:var(--tx)}
-.hero{padding:88px 0 72px;display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center}
-h1{font-family:Fraunces,serif;font-weight:400;font-size:clamp(44px,7vw,84px);line-height:1.02;letter-spacing:-.02em;margin:0 0 22px}
-h1 span{color:var(--gold)}
-.lead{color:var(--mut);max-width:52ch;margin:0 0 30px;font-size:18px}
-.btns{display:flex;flex-wrap:wrap;gap:12px}
-.btn{display:inline-block;padding:12px 22px;border-radius:999px;border:1px solid var(--line);font-weight:500;font-size:15px;cursor:pointer;font-family:inherit;color:var(--tx);background:transparent;transition:border-color .2s,background .2s}
-.btn:hover{border-color:var(--gold)}
-.btn.main{background:var(--gold);color:#17140a;border-color:var(--gold)}
-.btn.main:hover{background:#e6d4a2}
-.pipe{background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:22px;position:relative;box-shadow:0 0 80px -30px var(--ind)}
-.pipe small{color:var(--mut);display:block;margin-bottom:14px;font-size:13px}
-.step{display:flex;gap:14px;align-items:flex-start;padding:12px 0;position:relative;opacity:.35;animation:lit 6s infinite}
-.step:nth-of-type(2){animation-delay:0s}.step:nth-of-type(3){animation-delay:1.5s}.step:nth-of-type(4){animation-delay:3s}.step:nth-of-type(5){animation-delay:4.5s}
-.step i{flex:none;width:10px;height:10px;border-radius:50%;background:var(--ind);margin-top:8px;box-shadow:0 0 12px var(--ind)}
-.step p{margin:0;font-size:14px;color:var(--mut)}.step p b{display:block;color:var(--tx);font-weight:500;font-size:15px}
-@keyframes lit{0%,4%{opacity:.35}10%,30%{opacity:1}40%,100%{opacity:.35}}
-section{padding:72px 0;border-top:1px solid var(--line)}
-h2{font-family:Fraunces,serif;font-weight:400;font-size:clamp(30px,4vw,44px);letter-spacing:-.01em;margin:0 0 34px}
-.about{display:grid;grid-template-columns:340px 1fr;gap:64px;align-items:start}
-/* ★ PHOTO FRAME STYLE: change max-width / aspect-ratio here to resize the photo box ★ */
-.photo{margin:0;position:relative;isolation:isolate;aspect-ratio:4/5;width:100%;max-width:340px;border-radius:14px;background:linear-gradient(160deg,#1c1c27,#0f0f14);border:1px solid var(--line);display:grid;place-items:center;box-shadow:0 0 90px -30px var(--ind)}
-.photo::after{content:"";position:absolute;inset:16px -16px -16px 16px;border:1px solid rgba(217,196,140,.5);border-radius:14px;z-index:-1}
-.photo img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;border-radius:14px;display:block}
-.photo span{position:absolute;font:400 88px Fraunces,serif;color:var(--gold);letter-spacing:-.03em}
-@media(max-width:820px){.facts{grid-template-columns:1fr}.about{gap:40px}.photo{max-width:300px}}
-.about p{margin:0 0 16px;color:#cfccc2;max-width:62ch}
-.facts{margin:32px 0 0;padding:0 0 0 22px;list-style:none;border-left:2px solid var(--gold);display:grid;grid-template-columns:1fr 1fr;gap:18px 28px}
-.facts li{font-size:15px;color:var(--mut)}.facts b{display:block;color:var(--tx);font-weight:500}
-.projects{display:grid;gap:18px}
-.proj{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:28px;display:grid;grid-template-columns:1fr 1.3fr;gap:28px}
-.proj:first-child{border-color:rgba(217,196,140,.4)}
-.proj h3{font-family:Fraunces,serif;font-weight:600;font-size:23px;margin:0 0 12px;line-height:1.2}
-.tags{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
-.tags li{font-size:13px;padding:3px 11px;border-radius:999px;background:rgba(99,102,241,.14);color:#b8baf8}
-.proj ul.pts{margin:0;padding-left:18px;color:#cfccc2}.proj ul.pts li{margin-bottom:10px}
-.tl{display:grid;gap:30px}
-.job{display:grid;grid-template-columns:170px 1fr;gap:28px}
-.job time{color:var(--gold);font-size:15px}
-.job h3{margin:0 0 4px;font-size:19px;font-weight:600}.job .org{color:var(--mut);margin:0 0 10px}
-.job ul{margin:0;padding-left:18px;color:#cfccc2}.job li{margin-bottom:6px}
-.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.sk{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:24px}
-.sk h3{font-family:Fraunces,serif;font-weight:600;font-size:19px;margin:0 0 14px;color:var(--gold)}
-.cert{display:grid;gap:0}
-.cert div{display:flex;justify-content:space-between;gap:20px;padding:16px 0;border-bottom:1px solid var(--line)}
-.cert div:first-child{border-top:1px solid var(--line)}
-.cert span{color:var(--mut);white-space:nowrap}
-.contact{text-align:left}
-.contact p{max-width:54ch;color:var(--mut);margin:0 0 26px}
-.links{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
-footer{padding:28px 0 40px;border-top:1px solid var(--line);color:var(--mut);font-size:14px}
-@media(max-width:820px){nav ul{display:none}.hero,.about,.proj,.skills,.job{grid-template-columns:1fr}.job{gap:6px}.hero{padding-top:56px}.cert div{flex-direction:column;gap:2px}}
-@media(prefers-reduced-motion:reduce){.step{animation:none;opacity:1}html{scroll-behavior:auto}}
-@media print{:root{color-scheme:light}body{background:#fff;color:#111}nav,.hero .btns,.pipe,.contact .links,footer{display:none}section,.proj,.sk{border-color:#ccc;background:#fff;break-inside:avoid}.lead,.about p,.proj ul.pts,.job ul,.facts li,.job .org,.cert span{color:#333}h1 span,.job time,.sk h3{color:#7a6320}.tags li{background:#eee;color:#333}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Monil Patel – AI/ML Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav><div class="wrap"><b>Monil Patel</b>
+<ul><li><a href="#about">About</a></li><li><a href="#projects">Projects</a></li><li><a href="#experience">Experience</a></li><li><a href="#skills">Skills</a></li><li><a href="#contact">Contact</a></li></ul></div></nav>
 
-/* ★ PROJECT LINKS: clickable project titles and repo buttons */
-.proj h3 a{border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
-.proj h3 a:hover{color:var(--gold);border-color:var(--gold)}
-.repo{display:inline-block;margin-top:18px;font-size:14px;font-weight:500;color:var(--gold)}
-.repo:hover{text-decoration:underline}
+<header class="wrap hero">
+<div>
+<h1>I build AI that works with <span>real documents</span> and real questions.</h1>
+<p class="lead">I’m Monil Patel, a final-year IT student building LLM apps, RAG systems and offline AI agents with Python and Node.js. I’m looking for an entry-level AI/ML Engineer role.</p>
+<div class="btns">
+<a class="btn main" href="#projects">See my projects</a>
+<!-- ★ RESUME BUTTON: put your resume in the SAME folder and name it resume.pdf (or change the file name in href below) -->
+<a class="btn" href="resume.pdf" download="Monil-Patel-Resume.pdf">Download resume</a>
+<a class="btn" href="#contact">Get in touch</a>
+</div>
+</div>
+<div class="pipe" aria-label="How a RAG pipeline works">
+<small>The kind of system I build: retrieval-augmented generation</small>
+<div class="step"><i></i><p><b>Question comes in</b>A student asks something about their notes.</p></div>
+<div class="step"><i></i><p><b>Retrieve</b>Embeddings and FAISS find the most relevant passages.</p></div>
+<div class="step"><i></i><p><b>Prompt</b>The passages and question go to the LLM together.</p></div>
+<div class="step"><i></i><p><b>Grounded answer</b>The reply is based on the source, not guesses.</p></div>
+</div>
+</header>
+
+<main>
+<section id="about"><div class="wrap about">
+<!-- ╔══════════════════════════════════════════════════════════════════╗
+     ║  ★★★  ADD YOUR PHOTO HERE  ★★★                                   ║
+     ║                                                                  ║
+     ║  1. Save your photo in the SAME folder as this HTML file         ║
+     ║  2. Name it  monil.jpg   (best size 800x1000 px, vertical 4:5)   ║
+     ║     or change the file name inside src="..." on the img line     ║
+     ║  3. Refresh the page. Done!                                      ║
+     ║                                                                  ║
+     ║  Until the photo exists, the gold "MP" placeholder is shown.     ║
+     ╚══════════════════════════════════════════════════════════════════╝ -->
+<figure class="photo" aria-label="Portrait of Monil Patel">
+  <span>MP</span>
+  <!-- ▼▼▼ YOUR PHOTO LINE: change monil.jpg to your file name ▼▼▼ -->
+  <img src="monil.jpg" alt="Portrait of Monil Patel" width="560" height="700" onerror="this.remove()">
+  <!-- ▲▲▲ END OF YOUR PHOTO LINE ▲▲▲ -->
+</figure>
+<!-- ═══════════════════ END OF PHOTO SECTION ═══════════════════ -->
+<div>
+<h2>About</h2>
+<p>I’m a final-year B.E. Information Technology student at Laxmi Institute of Technology, Sarigam. My focus is Generative AI: LLM applications, Retrieval-Augmented Generation and agentic systems.</p>
+<p>I’ve built a study assistant on the Gemini API, a resume-job matching tool and a fully offline document-processing agent that runs a local LLM through Ollama. I like projects that replace manual work with something reliable.</p>
+<p>Outside code, I run a part-time wedding photography practice and won a national-level award at the “I Got Talent” event.</p>
+<ul class="facts">
+<li><b>Education</b>B.E. Information Technology, GTU, 2023–2027 (CGPA 7.50)</li>
+<li><b>Location</b>Malvan, Valsad, Gujarat</li>
+<li><b>Languages</b>Gujarati, Hindi, English</li>
+<li><b>Looking for</b>Entry-level AI/ML Engineer roles</li>
+</ul>
+</div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+<h2>Projects</h2>
+<div class="projects">
+<article class="proj"><div><h3><a href="https://github.com/MONILPATEL13/AI-Document-Processing-Agent" target="_blank" rel="noopener">AI Document Processing Agent</a></h3>
+<ul class="tags"><li>Python</li><li>Ollama</li><li>Local LLM</li><li>Streamlit</li></ul>
+<a class="repo" href="https://github.com/MONILPATEL13/AI-Document-Processing-Agent" target="_blank" rel="noopener">View repo on GitHub ↗</a></div>
+<ul class="pts"><li>A fully offline agent that reads invoice and document PDFs and uses a local LLM to pull out vendor, amount, date and line items as JSON.</li><li>Processes a whole folder in one run and writes a clean Excel report, which removes manual data entry.</li><li>Includes a Streamlit interface for live demos and testing.</li></ul></article>
+
+<article class="proj"><div><h3><a href="https://github.com/MONILPATEL13/VidyaBot" target="_blank" rel="noopener">VidyaBot – AI Study Assistant</a></h3>
+<ul class="tags"><li>Gemini API</li><li>JavaScript</li><li>Node.js</li><li>Express.js</li><li>HTML/CSS</li></ul>
+<a class="repo" href="https://github.com/MONILPATEL13/VidyaBot" target="_blank" rel="noopener">View repo on GitHub ↗</a></div>
+<ul class="pts"><li>A study assistant that answers academic questions through the Google Gemini API, with real-time chat and saved conversation history.</li><li>Backend deployed on Render and frontend on GitHub Pages, with a responsive, mobile-friendly interface.</li></ul></article>
+
+<article class="proj"><div><h3><a href="https://github.com/MONILPATEL13/AI-Resume-Job-Matcher" target="_blank" rel="noopener">AI Resume-Job Matcher</a></h3>
+<ul class="tags"><li>Python</li><li>NLP</li><li>TF-IDF</li><li>Sentence embeddings</li></ul>
+<a class="repo" href="https://github.com/MONILPATEL13/AI-Resume-Job-Matcher" target="_blank" rel="noopener">View repo on GitHub ↗</a></div>
+<ul class="pts"><li>Scores how well a resume fits a job description using text similarity, and highlights missing keywords and skills.</li><li>Parses PDF resumes, extracts key sections and returns a match percentage with clear gaps to fix.</li></ul></article>
+
+<article class="proj"><div><h3><a href="https://github.com/MONILPATEL13/ai-invoice-agent" target="_blank" rel="noopener">AI Invoice Agent</a></h3>
+<ul class="tags"><li>Python</li><li>Ollama</li><li>Qwen3</li></ul>
+<a class="repo" href="https://github.com/MONILPATEL13/ai-invoice-agent" target="_blank" rel="noopener">View repo on GitHub ↗</a></div>
+<ul class="pts"><li>An AI-powered invoice processing agent that runs on a locally hosted Qwen3 model through Ollama.</li></ul></article>
+
+<article class="proj"><div><h3><a href="https://github.com/MONILPATEL13/SmartShopper" target="_blank" rel="noopener">SmartShopper</a></h3>
+<ul class="tags"><li>Python</li><li>Flask</li><li>MySQL</li><li>Bootstrap</li><li>JavaScript</li></ul>
+<a class="repo" href="https://github.com/MONILPATEL13/SmartShopper" target="_blank" rel="noopener">View repo on GitHub ↗</a></div>
+<ul class="pts"><li>A Flask web app where shoppers scan a mall’s QR code or enter its Mall ID to browse products, prices and special offers.</li><li>Customers build a shopping list, set a budget with an alert when the total crosses it, and open Google Maps directions to a product’s section.</li><li>Mall admins get a dashboard to add and remove products and offers and to read feedback. Accounts use password hashing and email OTP password reset.</li></ul></article>
+</div>
+<div class="links" style="margin-top:24px"><a class="btn" href="https://github.com/MONILPATEL13" target="_blank" rel="noopener">See all code on GitHub</a></div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+<h2>Experience</h2>
+<div class="tl">
+<div class="job"><time>Jun 2026</time><div><h3>IBM SkillsBuild Virtual Internship</h3><p class="org">From User to Builder: AI, Data Science &amp; Agentic Systems</p><ul><li>Worked hands-on with AI pipelines, data science workflows and agentic AI system design.</li></ul></div></div>
+<div class="job"><time>Sep 2024 – Nov 2024</time><div><h3>Web Developer Intern</h3><p class="org">Wayspire</p><ul><li>Built and tested site features during an internship and trainee program, guided by a mentor.</li><li>Worked across front-end and back-end workflows and used Git for version control.</li></ul></div></div>
+</div></div></section>
+
+<section id="skills"><div class="wrap">
+<h2>Skills</h2>
+<div class="skills">
+<div class="sk"><h3>Generative AI &amp; LLMs</h3><ul class="tags"><li>Gemini API</li><li>Ollama</li><li>RAG</li><li>FAISS</li><li>Prompt engineering</li><li>NLP</li></ul></div>
+<div class="sk"><h3>Programming &amp; backend</h3><ul class="tags"><li>Python</li><li>JavaScript</li><li>Node.js</li><li>Express.js</li><li>REST APIs</li><li>HTML/CSS</li><li>Databases</li></ul></div>
+<div class="sk"><h3>Data &amp; tools</h3><ul class="tags"><li>pandas</li><li>Streamlit</li><li>Git &amp; GitHub</li><li>VS Code</li><li>Word, Excel, PowerPoint</li></ul></div>
+</div></div></section>
+
+<section id="certifications"><div class="wrap">
+<h2>Certifications</h2>
+<div class="cert">
+<div>From User to Builder: AI, Data Science &amp; Agentic Systems, IBM SkillsBuild<span>2026</span></div>
+<div>Frontend Web Development: HTML, CSS, Basic JS, Wayspire<span>2024</span></div>
+<div>Basic to Advanced Python Programming, Education Hub<span>Certificate</span></div>
+</div></div></section>
+
+<section id="contact"><div class="wrap contact">
+<h2>Let’s talk</h2>
+<p>I’m open to entry-level AI/ML roles and project collaborations. Email is the fastest way to reach me.</p>
+<div class="links">
+<a class="btn main" href="mailto:monilpatel4546@gmail.com">monilpatel4546@gmail.com</a>
+<a class="btn" href="tel:+919725597301">+91 97255 97301</a>
+<a class="btn" href="https://www.linkedin.com/in/monil-patel-698ab6311/" target="_blank" rel="noopener">LinkedIn</a>
+<a class="btn" href="https://github.com/MONILPATEL13" target="_blank" rel="noopener">GitHub</a>
+</div>
+</div></section>
+</main>
+<footer><div class="wrap">© 2026 Monil Patel. Malvan, Valsad, Gujarat 396375.</div></footer>
+</body>
+</html>
