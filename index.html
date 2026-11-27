@@ -15,19 +15,20 @@
 <header class="wrap hero">
 <div>
 <h1>I build AI that works with <span>real documents</span> and real questions.</h1>
-<p class="lead">I’m Monil Patel, a final-year IT student building LLM apps, RAG systems and offline AI agents with Python and Node.js. I’m looking for an entry-level AI/ML Engineer role.</p>
+<p class="lead">I’m Monil Patel, a final-year IT student building LLM apps and local AI agents with Python. I’m looking for an entry-level AI/ML Engineer role.</p>
 <div class="btns">
 <a class="btn main" href="#projects">See my projects</a>
-<button class="btn" type="button" onclick="window.print()">Download resume</button>
+<!-- ★ RESUME BUTTON: put your resume in the SAME folder and name it resume.pdf (or change the file name in href below) -->
+<a class="btn" href="Monil_Patel_Resume.pdf" download="Monil-Patel-Resume.pdf">Download resume</a>
 <a class="btn" href="#contact">Get in touch</a>
 </div>
 </div>
-<div class="pipe" aria-label="How a RAG pipeline works">
-<small>The kind of system I build: retrieval-augmented generation</small>
-<div class="step"><i></i><p><b>Question comes in</b>A student asks something about their notes.</p></div>
-<div class="step"><i></i><p><b>Retrieve</b>Embeddings and FAISS find the most relevant passages.</p></div>
-<div class="step"><i></i><p><b>Prompt</b>The passages and question go to the LLM together.</p></div>
-<div class="step"><i></i><p><b>Grounded answer</b>The reply is based on the source, not guesses.</p></div>
+<div class="pipe" aria-label="How my document agent works">
+<small>A project of mine: AI document processing</small>
+<div class="step"><i></i><p><b>Invoice comes in</b>A text-based PDF is added.</p></div>
+<div class="step"><i></i><p><b>Extract</b>Python reads the text from the PDF.</p></div>
+<div class="step"><i></i><p><b>Local LLM</b>A model in Ollama returns structured fields.</p></div>
+<div class="step"><i></i><p><b>Checked output</b>Dates and totals are checked, then saved to Excel.</p></div>
 </div>
 </header>
 
@@ -52,12 +53,12 @@
 <!-- ═══════════════════ END OF PHOTO SECTION ═══════════════════ -->
 <div>
 <h2>About</h2>
-<p>I’m a final-year B.E. Information Technology student at Laxmi Institute of Technology, Sarigam. My focus is Generative AI: LLM applications, Retrieval-Augmented Generation and agentic systems.</p>
-<p>I’ve built a study assistant on the Gemini API, a resume-job matching tool and a fully offline document-processing agent that runs a local LLM through Ollama. I like projects that replace manual work with something reliable.</p>
+<p>I’m a final-year B.E. Information Technology student at Laxmi Institute of Technology, Sarigam. My focus is Generative AI: LLM applications and agentic systems, with an interest in Retrieval-Augmented Generation.</p>
+<p>I’ve built a study and exam preparation web app, a resume-job matching tool and a local document-processing agent that runs a local LLM through Ollama. I like projects that replace manual work with something reliable.</p>
 <p>Outside code, I run a part-time wedding photography practice and won a national-level award at the “I Got Talent” event.</p>
 <ul class="facts">
 <li><b>Education</b>B.E. Information Technology, GTU, 2023–2027 (CGPA 7.50)</li>
-<li><b>Location</b>Malvan, Valsad, Gujarat</li>
+<li><b>Location</b>Gujarat, India</li>
 <li><b>Languages</b>Gujarati, Hindi, English</li>
 <li><b>Looking for</b>Entry-level AI/ML Engineer roles</li>
 </ul>
@@ -67,17 +68,30 @@
 <section id="projects"><div class="wrap">
 <h2>Projects</h2>
 <div class="projects">
-<article class="proj"><div><h3>AI Document Processing Agent</h3>
-<ul class="tags"><li>Python</li><li>Ollama</li><li>Local LLM</li><li>Streamlit</li></ul></div>
+<article class="proj"><div><h3><a href="https://github.com/MONILPATEL13/AI-Document-Processing-Agent" target="_blank" rel="noopener">AI Document Processing Agent</a></h3>
+<ul class="tags"><li>Python</li><li>Ollama</li><li>Local LLM</li><li>Streamlit</li></ul>
+<a class="repo" href="https://github.com/MONILPATEL13/AI-Document-Processing-Agent" target="_blank" rel="noopener">View repo on GitHub ↗</a></div>
 <ul class="pts"><li>A fully offline agent that reads invoice and document PDFs and uses a local LLM to pull out vendor, amount, date and line items as JSON.</li><li>Processes a whole folder in one run and writes a clean Excel report, which removes manual data entry.</li><li>Includes a Streamlit interface for live demos and testing.</li></ul></article>
 
-<article class="proj"><div><h3>VidyaBot – AI Study Assistant</h3>
-<ul class="tags"><li>Gemini API</li><li>JavaScript</li><li>Node.js</li><li>Express.js</li><li>HTML/CSS</li></ul></div>
-<ul class="pts"><li>A study assistant that answers academic questions through the Google Gemini API, with real-time chat and saved conversation history.</li><li>Backend deployed on Render and frontend on GitHub Pages, with a responsive, mobile-friendly interface.</li></ul></article>
+<article class="proj"><div><h3><a href="https://monilpatel13.github.io/VidyaBot/" target="_blank" rel="noopener">VidyaBot – Study Companion</a></h3>
+<ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+<a class="repo" href="https://github.com/MONILPATEL13/VidyaBot" target="_blank" rel="noopener">View repo on GitHub ↗</a></div>
+<ul class="pts"><li>A study and exam preparation web app for engineering students, with concept notes, flashcards, quizzes, a formula sheet and a study timer.</li></ul></article>
 
-<article class="proj"><div><h3>AI Resume-Job Matcher</h3>
-<ul class="tags"><li>Python</li><li>NLP</li><li>TF-IDF</li><li>Sentence embeddings</li></ul></div>
+<article class="proj"><div><h3><a href="https://github.com/MONILPATEL13/AI-Resume-Job-Matcher" target="_blank" rel="noopener">AI Resume-Job Matcher</a></h3>
+<ul class="tags"><li>Python</li><li>NLP</li><li>TF-IDF</li><li>Sentence embeddings</li></ul>
+<a class="repo" href="https://github.com/MONILPATEL13/AI-Resume-Job-Matcher" target="_blank" rel="noopener">View repo on GitHub ↗</a></div>
 <ul class="pts"><li>Scores how well a resume fits a job description using text similarity, and highlights missing keywords and skills.</li><li>Parses PDF resumes, extracts key sections and returns a match percentage with clear gaps to fix.</li></ul></article>
+
+<article class="proj"><div><h3><a href="https://github.com/MONILPATEL13/ai-invoice-agent" target="_blank" rel="noopener">AI Invoice Agent</a></h3>
+<ul class="tags"><li>Python</li><li>Ollama</li><li>Qwen3</li></ul>
+<a class="repo" href="https://github.com/MONILPATEL13/ai-invoice-agent" target="_blank" rel="noopener">View repo on GitHub ↗</a></div>
+<ul class="pts"><li>An AI-powered invoice processing agent that runs on a locally hosted Qwen3 model through Ollama.</li></ul></article>
+
+<article class="proj"><div><h3><a href="https://github.com/MONILPATEL13/SmartShopper" target="_blank" rel="noopener">SmartShopper</a></h3>
+<ul class="tags"><li>Python</li><li>Flask</li><li>MySQL</li><li>Bootstrap</li><li>JavaScript</li></ul>
+<a class="repo" href="https://github.com/MONILPATEL13/SmartShopper" target="_blank" rel="noopener">View repo on GitHub ↗</a></div>
+<ul class="pts"><li>A Flask web app where shoppers scan a mall’s QR code or enter its Mall ID to browse products, prices and special offers.</li><li>Customers build a shopping list, set a budget with an alert when the total crosses it, and open Google Maps directions to a product’s section.</li><li>Mall admins get a dashboard to add and remove products and offers and to read feedback. Accounts use password hashing.</li></ul></article>
 </div>
 <div class="links" style="margin-top:24px"><a class="btn" href="https://github.com/MONILPATEL13" target="_blank" rel="noopener">See all code on GitHub</a></div>
 </div></section>
@@ -92,7 +106,7 @@
 <section id="skills"><div class="wrap">
 <h2>Skills</h2>
 <div class="skills">
-<div class="sk"><h3>Generative AI &amp; LLMs</h3><ul class="tags"><li>Gemini API</li><li>Ollama</li><li>RAG</li><li>FAISS</li><li>Prompt engineering</li><li>NLP</li></ul></div>
+<div class="sk"><h3>Generative AI &amp; LLMs</h3><ul class="tags"><li>Gemini API</li><li>Ollama</li><li>Learning: RAG</li><li>Learning: FAISS</li><li>Prompt engineering</li><li>NLP</li></ul></div>
 <div class="sk"><h3>Programming &amp; backend</h3><ul class="tags"><li>Python</li><li>JavaScript</li><li>Node.js</li><li>Express.js</li><li>REST APIs</li><li>HTML/CSS</li><li>Databases</li></ul></div>
 <div class="sk"><h3>Data &amp; tools</h3><ul class="tags"><li>pandas</li><li>Streamlit</li><li>Git &amp; GitHub</li><li>VS Code</li><li>Word, Excel, PowerPoint</li></ul></div>
 </div></div></section>
@@ -110,12 +124,11 @@
 <p>I’m open to entry-level AI/ML roles and project collaborations. Email is the fastest way to reach me.</p>
 <div class="links">
 <a class="btn main" href="mailto:monilpatel4546@gmail.com">monilpatel4546@gmail.com</a>
-<a class="btn" href="tel:+919725597301">+91 97255 97301</a>
-<a class="btn" href="https://www.linkedin.com/in/monil-patel-698ab6311" target="_blank" rel="noopener">LinkedIn</a>
+<a class="btn" href="https://www.linkedin.com/in/monil-patel-698ab6311/" target="_blank" rel="noopener">LinkedIn</a>
 <a class="btn" href="https://github.com/MONILPATEL13" target="_blank" rel="noopener">GitHub</a>
 </div>
 </div></section>
 </main>
-<footer><div class="wrap">© 2026 Monil Patel. Malvan, Valsad, Gujarat 396375.</div></footer>
+<footer><div class="wrap">© 2026 Monil Patel.</div></footer>
 </body>
 </html>
